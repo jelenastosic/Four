@@ -1,15 +1,15 @@
 FROM node:carbon
 
 # Set the working directory to /app
-WORKDIR ./
+WORKDIR /app
 
 # Copy the current directory contents into the container at /app
-COPY ./app
+COPY . /app
 
 # Install any needed packages specified in package.json
 RUN npm install
 
 
 # Run app when the container launches
-CMD ["npm", "run", "start"]
+CMD ["npm", "start"]
 
